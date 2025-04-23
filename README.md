@@ -23,14 +23,14 @@ Execute Django admin and create details for 10 books
 admin.py
 
 from django.contrib import admin
-from .models import Employee,EmployeeAdmin
-admin.site.register(Employee,EmployeeAdmin)
+from .models import Movie,MovieAdmin
+admin.site.register(Movie,MovieAdmin)
 
 models.py
 
 from django.db import models
 from django.contrib import admin
-class Employee (models.Model):
+class Movie(models.Model):
     USER_ID=models.IntegerField(primary_key=True)
     USER_NAME=models.CharField(max_length=100)
     PHONE_NUMBER=models.IntegerField()
@@ -38,13 +38,15 @@ class Employee (models.Model):
     MOVIE_NAME=models.CharField(max_length=100)
     SEATS=models.IntegerField()
  
-class EmployeeAdmin(admin.ModelAdmin):
+class MovieAdmin(admin.ModelAdmin):
     list_display=('USER_ID','USER_NAME','PHONE_NUMBER','EMAIL','MOVIE_NAME','SEATS')
 
 
 ```
 
+## ER DIAGRAM 
 
+![alt text](IMG-20250423-WA0003[1].jpg)
 
 ## OUTPUT
 
